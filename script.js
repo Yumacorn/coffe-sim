@@ -9,8 +9,12 @@ function buttonClick(event) {
             break;
         case 'drink':
             alert('Drink the coffee');
-            heartMug.textContent = 'Cup: Empty';
-            personStatus.textContent = 'Person: Satisfied!';
+            if(heartMug.textContent == 'Cup: FULL'){
+                heartMug.textContent = 'Cup: Empty';
+                personStatus.textContent = 'Person: Satisfied!';
+            } else {
+                personStatus.textContent = 'Person: Confused?';
+            }
             break;
     }
     
